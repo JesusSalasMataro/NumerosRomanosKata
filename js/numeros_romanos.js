@@ -1,57 +1,57 @@
-function NumberConversor() {
-	this.ToRoman = function(number) {
-		var romanNumber = '';
+class NumberConversor {
+	toRoman(number) {
+		let romanNumber = '';
 
-		romanNumber += _calculateHundreds(number);
-		romanNumber += _calculateTens(number);
-		romanNumber += _calculateUnits(number);
+		romanNumber += this._calculateHundreds(number);
+		romanNumber += this._calculateTens(number);
+		romanNumber += this._calculateUnits(number);
 			
 		return romanNumber;
 	};
 
-	var _calculateUnits = function(number) {
-		var romanNumber = _calculateUnitFigure(number);
+	_calculateUnits(number) {
+		let romanNumber = this._calculateUnitFigure(number);
 		return romanNumber;
 	};
 
-	var _calculateTens = function(number) {
+	_calculateTens(number) {
 		number = Math.floor(number / 10);
-		var romanNumber = _calculateTenFigure(number);
+		let romanNumber = this._calculateTenFigure(number);
 		return romanNumber;
 	};	
 
-	var _calculateHundreds = function(number) {
+	_calculateHundreds(number) {
 		number = Math.floor(number / 100);
-		var romanNumber = _calculateHundredFigure(number);
+		let romanNumber = this._calculateHundredFigure(number);
 		return romanNumber;		
 	}	
 
-	var _odd = function(number) {
+	_odd(number) {
 		return number % 2 > 0; 
 	};
 
-	var _calculateUnitFigure = function(number) {		
-		var romanNumber = _calculateFigure(number, 'IX', 'IV', 'V', 'I');
+	_calculateUnitFigure(number) {		
+		let romanNumber = this._calculateFigure(number, 'IX', 'IV', 'V', 'I');
 		return romanNumber;
 	};
 
-	var _calculateTenFigure = function(number) {
-		var romanNumber = _calculateFigure(number, 'XC', 'XL', 'L', 'X');
+	_calculateTenFigure(number) {
+		let romanNumber = this._calculateFigure(number, 'XC', 'XL', 'L', 'X');
 		return romanNumber;
 	};
 
-	var _calculateHundredFigure = function(number) {
-		var romanNumber = _calculateFigure(number, 'CM', 'CD', 'D', 'C');
+	_calculateHundredFigure(number) {
+		let romanNumber = this._calculateFigure(number, 'CM', 'CD', 'D', 'C');
 		return romanNumber;
 	};		
 
-	var _calculateFigure = function(number, nineModuleCase, fourModuleCase, oddFiveDivisonCase, 
+	_calculateFigure(number, nineModuleCase, fourModuleCase, oddFiveDivisonCase, 
 		repeatedLettersCase) {
 
-		var fiveDivision = Math.floor(number / 5);
-		var fiveDivisionModule = number % 5;
-		var tenDivisionModule = number % 10;		
-		var romanNumber = '';
+		let fiveDivision = Math.floor(number / 5);
+		let fiveDivisionModule = number % 5;
+		let tenDivisionModule = number % 10;		
+		let romanNumber = '';
 
 		if (tenDivisionModule == 9) {
 			romanNumber = nineModuleCase;
@@ -59,12 +59,12 @@ function NumberConversor() {
 		else if (fiveDivisionModule == 4) {
 			romanNumber = fourModuleCase;
 		}
-		else if (_odd(fiveDivision)) {
+		else if (this._odd(fiveDivision)) {
 			romanNumber = oddFiveDivisonCase;
 		}
 		
 		if (fiveDivisionModule < 4) {
-			for (var i = 0; i < fiveDivisionModule; i++) {
+			for (let i = 0; i < fiveDivisionModule; i++) {
 				romanNumber += repeatedLettersCase;
 			}		
 		}
@@ -72,7 +72,7 @@ function NumberConversor() {
 		return romanNumber;		
 	};
 
-};
+}
 
 
 

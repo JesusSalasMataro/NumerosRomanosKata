@@ -1,6 +1,6 @@
 describe("convert to roman numerals", function() {
  
-    var _sut;
+    let _sut;
 
     beforeEach(function() {
         _sut = new NumberConversor();        
@@ -10,7 +10,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(1);
+        let actualRomanNumber = _sut.toRoman(1);
 
         // ASSERT
         expect(actualRomanNumber).toBe('I');
@@ -20,7 +20,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(2);
+        let actualRomanNumber = _sut.toRoman(2);
 
         // ASSERT
         expect(actualRomanNumber).toBe('II');
@@ -30,7 +30,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(3);
+        let actualRomanNumber = _sut.toRoman(3);
 
         // ASSERT
         expect(actualRomanNumber).toBe('III');
@@ -40,7 +40,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(5);
+        let actualRomanNumber = _sut.toRoman(5);
 
         // ASSERT
         expect(actualRomanNumber).toBe('V');
@@ -50,7 +50,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(4);
+        let actualRomanNumber = _sut.toRoman(4);
 
         // ASSERT
         expect(actualRomanNumber).toBe('IV');
@@ -60,7 +60,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(6);
+        let actualRomanNumber = _sut.toRoman(6);
 
         // ASSERT
         expect(actualRomanNumber).toBe('VI');
@@ -70,7 +70,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(10);
+        let actualRomanNumber = _sut.toRoman(10);
 
         // ASSERT
         expect(actualRomanNumber).toBe('X');
@@ -80,7 +80,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(12);
+        let actualRomanNumber = _sut.toRoman(12);
 
         // ASSERT
         expect(actualRomanNumber).toBe('XII');
@@ -90,7 +90,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(14);
+        let actualRomanNumber = _sut.toRoman(14);
 
         // ASSERT
         expect(actualRomanNumber).toBe('XIV');
@@ -100,7 +100,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(15);
+        let actualRomanNumber = _sut.toRoman(15);
 
         // ASSERT
         expect(actualRomanNumber).toBe('XV');
@@ -110,7 +110,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(18);
+        let actualRomanNumber = _sut.toRoman(18);
 
         // ASSERT
         expect(actualRomanNumber).toBe('XVIII');
@@ -120,7 +120,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(20);
+        let actualRomanNumber = _sut.toRoman(20);
 
         // ASSERT
         expect(actualRomanNumber).toBe('XX');
@@ -130,7 +130,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(22);
+        let actualRomanNumber = _sut.toRoman(22);
 
         // ASSERT
         expect(actualRomanNumber).toBe('XXII');
@@ -140,7 +140,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(24);
+        let actualRomanNumber = _sut.toRoman(24);
 
         // ASSERT
         expect(actualRomanNumber).toBe('XXIV');
@@ -150,7 +150,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(25);
+        let actualRomanNumber = _sut.toRoman(25);
 
         // ASSERT
         expect(actualRomanNumber).toBe('XXV');
@@ -160,7 +160,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(27);
+        let actualRomanNumber = _sut.toRoman(27);
 
         // ASSERT
         expect(actualRomanNumber).toBe('XXVII');
@@ -170,7 +170,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(29);
+        let actualRomanNumber = _sut.toRoman(29);
 
         // ASSERT
         expect(actualRomanNumber).toBe('XXIX');
@@ -180,7 +180,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(30);
+        let actualRomanNumber = _sut.toRoman(30);
 
         // ASSERT
         expect(actualRomanNumber).toBe('XXX');
@@ -190,7 +190,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(40);
+        let actualRomanNumber = _sut.toRoman(40);
 
         // ASSERT
         expect(actualRomanNumber).toBe('XL');
@@ -200,7 +200,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(50);
+        let actualRomanNumber = _sut.toRoman(50);
 
         // ASSERT
         expect(actualRomanNumber).toBe('L');
@@ -210,7 +210,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(53);
+        let actualRomanNumber = _sut.toRoman(53);
 
         // ASSERT
         expect(actualRomanNumber).toBe('LIII');
@@ -220,7 +220,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(59);
+        let actualRomanNumber = _sut.toRoman(59);
 
         // ASSERT
         expect(actualRomanNumber).toBe('LIX');
@@ -230,7 +230,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(60);
+        let actualRomanNumber = _sut.toRoman(60);
 
         // ASSERT
         expect(actualRomanNumber).toBe('LX');
@@ -240,7 +240,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(70);
+        let actualRomanNumber = _sut.toRoman(70);
 
         // ASSERT
         expect(actualRomanNumber).toBe('LXX');
@@ -250,7 +250,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(74);
+        let actualRomanNumber = _sut.toRoman(74);
 
         // ASSERT
         expect(actualRomanNumber).toBe('LXXIV');
@@ -260,7 +260,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(89);
+        let actualRomanNumber = _sut.toRoman(89);
 
         // ASSERT
         expect(actualRomanNumber).toBe('LXXXIX');
@@ -270,7 +270,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(100);
+        let actualRomanNumber = _sut.toRoman(100);
 
         // ASSERT
         expect(actualRomanNumber).toBe('C');
@@ -280,7 +280,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(90);
+        let actualRomanNumber = _sut.toRoman(90);
 
         // ASSERT
         expect(actualRomanNumber).toBe('XC');
@@ -290,7 +290,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(434);
+        let actualRomanNumber = _sut.toRoman(434);
 
         // ASSERT
         expect(actualRomanNumber).toBe('CDXXXIV');
@@ -300,7 +300,7 @@ describe("convert to roman numerals", function() {
         // ARRANGE
 
         // ACT
-        var actualRomanNumber = _sut.ToRoman(826);
+        let actualRomanNumber = _sut.toRoman(826);
 
         // ASSERT
         expect(actualRomanNumber).toBe('DCCCXXVI');
